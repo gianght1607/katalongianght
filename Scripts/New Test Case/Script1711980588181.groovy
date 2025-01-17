@@ -25,8 +25,9 @@ WebUI.doubleClick(findTestObject('firstPr'))
 
 WebUI.click(findTestObject('qty'))
 
-WebUI.executeJavaScript("arguments[0].value = '';", Arrays.asList(WebUI.findWebElement(findTestObject('qty'))))
-
+WebUI.executeJavaScript('arguments[0].value = \'\';', Arrays.asList(WebUI.findWebElement(findTestObject('qty'))))
 
 WebUI.setText(findTestObject('qty'), '9999')
+
+WebUI.closeBrowser()
 
